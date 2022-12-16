@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import profilePic from '../public/bg-dark.png'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
@@ -31,7 +32,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
   return (
     <>
       <Head>
-        <title>Next.js Conf 2022 Photos</title>
+        <title>Photos</title>
         <meta
           property="og:image"
           content="https://nextjsconf-pics.vercel.app/og-image.png"
@@ -59,11 +60,15 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
               </span>
               <span className="absolute left-0 right-0 bottom-0 h-[400px] bg-gradient-to-b from-black/0 via-black to-black"></span>
             </div>
-            <Logo />
-            <h1 className="mt-8 mb-4 text-base font-bold uppercase tracking-widest">
+            {/* <Image src={profilePic} alt="logo" width={150} height={150}></Image> */}
+            <div className='text-5xl font-extrabold mb-80'>
+              My Photos
+            </div>
+            {/* <Logo /> */}
+            {/* <h1 className="mt-8 mb-4 text-base font-bold uppercase tracking-widest">
               2022 Event Photos
-            </h1>
-            <p className="max-w-[40ch] text-white/75 sm:max-w-[32ch]">
+            </h1> */}
+            {/* <p className="max-w-[40ch] text-white/75 sm:max-w-[32ch]">
               Our incredible Next.js community got together in San Francisco for
               our first ever in-person conference!
             </p>
@@ -74,7 +79,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
               rel="noreferrer"
             >
               Clone and Deploy
-            </a>
+            </a> */}
           </div>
           {images.map(({ id, public_id, format, blurDataUrl }) => (
             <Link
@@ -103,7 +108,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
           ))}
         </div>
       </main>
-      <footer className="p-6 text-center text-white/80 sm:p-12">
+      {/* <footer className="p-6 text-center text-white/80 sm:p-12">
         Thank you to{' '}
         <a
           href="https://edelsonphotography.com/"
@@ -132,7 +137,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
           Gary Sexton
         </a>{' '}
         for the pictures.
-      </footer>
+      </footer> */}
     </>
   )
 }

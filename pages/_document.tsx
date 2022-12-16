@@ -1,11 +1,25 @@
-import Document, { Head, Html, Main, NextScript } from 'next/document'
+import Document, { Head, Html, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
         <Head>
-          <link rel="icon" href="/favicon.ico" />
+          {/* <link rel="icon" href="/favicon.ico" /> */}
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/bg-dark.png"
+            media="(prefers-color-scheme: dark)"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/bg-light.png"
+            media="(prefers-color-scheme: light)"
+          />
           <meta
             name="description"
             content="See pictures from Next.js Conf and the After Party."
@@ -28,8 +42,8 @@ class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    )
+    );
   }
 }
 
-export default MyDocument
+export default MyDocument;
